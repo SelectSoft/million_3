@@ -1,22 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@SelectSoft 
-1
-00SelectSoft/million_sounami
- Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights Settings
-million_sounami/scraper.py / 
-@SelectSoft SelectSoft Update scraper.py
-9d8e012 26 minutes ago
-122 lines (103 sloc)  4.93 KB
-  
-You're using code navigation to jump to definitions or references.
-Learn more or give us feedback
 # This is a template for a Python scraper on morph.io (https://morph.io)
 # including some code snippets below that you should find helpful
 
