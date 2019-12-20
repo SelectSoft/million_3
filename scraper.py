@@ -39,7 +39,7 @@ def item_scrapping(name):
 	while item_no <= total-1:
 		try:
 			try:
-				print("Scrapping item "+str(url_number)+" of "+str(total))
+				
 				
 				response = requests.get(url=url[item_no],timeout= 10)		
 				soup = BeautifulSoup(response.text, 'html.parser')
@@ -99,24 +99,24 @@ def item_scrapping(name):
 				item_no += 1
 				url_number += 1
 			except requests.ConnectionError:
-				print("No internet connection")
+				
 				while True:
 					try:
 						requests.get('https://www.google.com/')
-						print("Internet Connection available")		
+							
 						break
 					except requests.ConnectionError:
 						continue
 
 		except:
-			print("Error in Item: "+ str(url_number))
+			
 			item_no += 1
 			url_number += 1
 
 item_scrapping("files2.csv")
-data = pd.read_csv('Scrapped_Data3e.csv')
+data = pd.read_csv('Scrapped_Data_files2.csv.csv')
 conn = sqlite3.connect("data.sqlite")
 
-conn.execute("CREATE TABLE if not exists data ('Title','Prodcut_VPN','Brand','Price','Description','Images','Category','Sub_Category','Related_Products_VPN','URL')")
+conn.execute("CREATE TABLE if not exists data ('Title','Prodcut_VPN','Brand','Price','Description','Images','Category','Sub_Category','Related_Products_VPN','URL','UPC','Warranty','Packaging_info','Specificaiton')")
 
 data.to_sql("data", conn, if_exists='replace', index=False)
